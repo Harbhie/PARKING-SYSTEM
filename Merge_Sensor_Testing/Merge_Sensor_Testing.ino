@@ -73,8 +73,4 @@ void loop() {
   if (!ir2Detected) {
     hasTriggeredBackward = false;
   }
-
-
-
-  
 }
