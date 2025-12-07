@@ -50,7 +50,7 @@ void loop() {
   }
 
   // Stop buzzer after 10 seconds
-  if (isBuzzing && millis() - buzzStartTime >= 10000) {
+  if (isBuzzing && millis() - buzzStartTime >= 5000) {
     isBuzzing = false;
     digitalWrite(BUZZER_PIN, LOW);
     Serial.println("Buzzing stopped.");
