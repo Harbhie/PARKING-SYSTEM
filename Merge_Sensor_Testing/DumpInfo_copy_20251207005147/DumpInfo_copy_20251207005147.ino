@@ -1,9 +1,9 @@
 #include <ESP32Servo.h>
-#define TRIG_PIN 12
-#define ECHO_PIN 13
-#define BUZZER_PIN 14
-#define IR_PIN 27
-#define SERVO_PIN 26
+#define TRIG_PIN 4
+#define ECHO_PIN 33
+#define BUZZER_PIN 26
+#define IR_PIN 32
+#define SERVO_PIN 25
 
 unsigned long buzzStartTime = 0;  // Timestamp when buzzer started
 bool isBuzzing = false;           // Track buzzer state
@@ -70,30 +70,3 @@ void loop() {
 
   delay(100); // Short delay for stability
 }
-// #include <ESP32Servo.h>
-
-// #define IR_PIN 27
-// #define SERVO_PIN 26
-
-// Servo myServo;
-
-// void setup() {
-//   pinMode(IR_PIN, INPUT);
-//   myServo.attach(SERVO_PIN);
-//   myServo.write(0); // initial position
-// }
-
-// void loop() {
-//   int irState = digitalRead(IR_PIN);
-
-//   if (irState == HIGH) { // Object detected
-//     myServo.write(180); // rotate to 180°
-//   } 
-//   else { // No object detected
-		
-//     myServo.write(0); // rotate back to 0°
-// 		delay(5000);
-//   }
-
-//   delay(100); // small delay for stability
-// }
